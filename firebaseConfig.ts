@@ -1,20 +1,19 @@
 import { initializeApp } from 'firebase/app';
-import { getAnalytics } from 'firebase/analytics';
+// import { getAnalytics } from 'firebase/analytics';
 import { getAuth } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
-// import { API_KEY, AUTH_DOMAIN, PROJECT_ID, STORAGE_BUCKET, MESSAGING_SENDER_ID, APP_ID, MEASUREMENT_ID } from '@env';
 
-// const firebaseConfig = {
-//   apiKey: API_KEY,
-//   authDomain: AUTH_DOMAIN,
-//   projectId: PROJECT_ID,
-//   storageBucket: STORAGE_BUCKET,
-//   messagingSenderId: MESSAGING_SENDER_ID,
-//   appId: APP_ID,
-//   measurementId: MEASUREMENT_ID,
-// };
+const firebaseConfig = {
+  apiKey: process.env.EXPO_PUBLIC_API_KEY,
+  authDomain: process.env.EXPO_PUBLIC_AUTH_DOMAIN,
+  projectId: process.env.EXPO_PUBLIC_PROJECT_ID,
+  storageBucket: process.env.EXPO_PUBLIC_STORAGE_BUCKET,
+  messagingSenderId: process.env.EXPO_PUBLIC_MESSAGING_SENDER_ID,
+  appId: process.env.EXPO_PUBLIC_APP_ID,
+  measurementId: process.env.EXPO_PUBLIC_MEASUREMENT_ID,
+};
 
-// export const FIREBASE_APP = initializeApp(firebaseConfig);
+export const FIREBASE_APP = initializeApp(firebaseConfig);
 // export const FIREBASE_ANALYTICS = getAnalytics(FIREBASE_APP);
-// export const FIREBASE_AUTH = getAuth(FIREBASE_APP);
-// export const FIREBASE_FIRESTORE = getFirestore(FIREBASE_APP);
+export const FIREBASE_AUTH = getAuth(FIREBASE_APP);
+export const FIREBASE_FIRESTORE = getFirestore(FIREBASE_APP);

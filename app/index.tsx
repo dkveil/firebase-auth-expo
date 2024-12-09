@@ -2,31 +2,46 @@ import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
 import { KeyboardAvoidingView, View, Text, TextInput, Button, ActivityIndicator } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-// import { FIREBASE_AUTH } from '../firebaseConfig';
-// import Config from 'react-native-config';
+import { FIREBASE_AUTH } from '../firebaseConfig';
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth';
+import { FirebaseError } from 'firebase/app';
 
 export default function Index() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
 
-  // const auth = FIREBASE_AUTH;
-
-  // console.log(Config.API_KEY);
+  const auth = FIREBASE_AUTH;
 
   const signUp = async () => {
     setLoading(true);
 
     try {
+      const res = await createUserWithEmailAndPassword(auth, email, password);
+      console.log(res);
+
       alert('Check your email for verification');
     } catch (error) {
       console.error(error);
+      alert((error as FirebaseError).message);
     } finally {
       setLoading(false);
     }
   };
 
-  const signIn = () => {};
+  const signIn = async () => {
+    try {
+      const res = await signInWithEmailAndPassword(auth, email, password);
+      console.log(res);
+
+      alert('Logged in');
+    } catch (error) {
+      console.error(error);
+      alert((error as FirebaseError).message);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <SafeAreaView className='flex-1 flex justify-center mx-5'>
