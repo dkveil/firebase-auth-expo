@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "446333051882",
+    "project_id": "fir-auth-expo-2d479",
+    "storage_bucket": "fir-auth-expo-2d479.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:446333051882:android:19cd9ca16f623c45080893",
+        "android_client_info": {
+          "package_name": "com.galexies.firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "446333051882-5s920cst0q62d6c6smn9hjb4chsu8jui.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.galexies.firebase",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "446333051882-7ptjjrgtt59farnh3sgjua5ihh9js7iq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAl5oLvJIODVQkq316v8cXoCBenozYVMkk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "446333051882-7ptjjrgtt59farnh3sgjua5ihh9js7iq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "446333051882-e5vpv636its8pr5em5hald22di6cv2bm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.galexies.firebase"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
